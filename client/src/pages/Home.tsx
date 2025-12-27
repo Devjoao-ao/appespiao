@@ -6,12 +6,25 @@ import { Search, MoreVertical, Paperclip, Smile, Mic, CheckCheck, ShieldAlert, S
 
 const cities = ["Luanda", "Benguela", "Huambo", "Lubango", "Cabinda", "Lobito", "Viana", "Cacuaco"];
 
+const generateRandomPhone = () => {
+  const prefix = "9" + Math.floor(Math.random() * 9);
+  const part1 = Math.floor(Math.random() * 900) + 100;
+  const part2 = Math.floor(Math.random() * 900) + 100;
+  return `${prefix}${Math.floor(Math.random() * 9)} ${part1} ${part2}`;
+};
+
 export default function Home() {
   const [step, setStep] = useState(1);
   const [phone, setPhone] = useState("");
   const [progress, setProgress] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
   const [targetPhone, setTargetPhone] = useState("");
+  const [randomPhones, setRandomPhones] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Generate some random phones on load to vary the sidebar
+    setRandomPhones(Array.from({ length: 8 }, () => generateRandomPhone()));
+  }, []);
 
   useEffect(() => {
     if (step === 3) {
@@ -220,15 +233,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex-1 overflow-y-auto scrollbar-hide">
-                {[1,2,3,4,5,6,7,8].map(i => (
+                {randomPhones.map((randomNum, i) => (
                   <div key={i} className="flex p-3 gap-3 hover:bg-[#202c33] cursor-pointer border-b border-[#222d34]/50">
                     <div className="w-12 h-12 rounded-full bg-[#6a7175] blur-md shrink-0"></div>
                     <div className="flex-1 min-w-0">
                       <div className="flex justify-between mb-1">
-                        <span className="font-medium text-[#e9edef] truncate">🔒 Perfil Bloqueado</span>
+                        <span className="font-medium text-[#e9edef] truncate">🔒 (+244) {randomNum.slice(0, -3)}***</span>
                         <span className="text-[10px] text-[#8696a0]">14:3{i}</span>
                       </div>
-                      <p className="text-xs text-[#8696a0] truncate italic italic">Dados privados ocultos...</p>
+                      <p className="text-xs text-[#8696a0] truncate">Dados privados ocultos...</p>
                     </div>
                   </div>
                 ))}
@@ -254,8 +267,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Messages Area */}
-              <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative scrollbar-hide">
+                <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative scrollbar-hide">
                 <div className="mx-auto bg-[#182229] py-1.5 px-3 rounded-lg text-[11px] text-[#8696a0] uppercase mb-4 shadow-sm border border-white/5">
                   Hoje
                 </div>
@@ -281,7 +293,7 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-bold text-white mb-4">Relatório Protegido</h3>
                       <p className="text-[#8696a0] text-sm leading-relaxed mb-8">
-                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias com este número: <span className="text-white font-bold">(+244) {targetPhone}</span>.
+                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias com este número: <span className="text-white font-bold">(+244) {targetPhone.slice(0, -3)}***</span>.
                       </p>
                       <Button 
                         onClick={() => window.location.href = "https://www.kintu.org/product/2f9ea4b3-2793-424f-8f1f-a98724e0db64"}

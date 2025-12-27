@@ -25,7 +25,7 @@
   --input: 0 0% 18%;
   --ring: 142 70% 35%;
   --radius: 19px;
-  --font-sans: 'Raleway', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
 @layer base {
