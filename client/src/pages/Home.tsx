@@ -11,6 +11,7 @@ export default function Home() {
   const [phone, setPhone] = useState("");
   const [progress, setProgress] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
+  const [targetPhone, setTargetPhone] = useState("");
 
   useEffect(() => {
     if (step === 3) {
@@ -41,6 +42,11 @@ export default function Home() {
     }
   }, [step]);
 
+  const handleStartScan = () => {
+    setTargetPhone(phone);
+    setStep(3);
+  };
+
   return (
     <div className="min-h-screen bg-[#0b141a] text-[#e9edef] font-sans flex flex-col items-center justify-center p-0 overflow-hidden selection:bg-[#00a884]/30">
       <AnimatePresence mode="wait">
@@ -57,7 +63,7 @@ export default function Home() {
                   <div className="w-20 h-20 bg-[#00a884]/10 rounded-full flex items-center justify-center mx-auto border border-[#00a884]/30">
                     <ShieldCheck size={40} className="text-[#00a884] animate-pulse" />
                   </div>
-                  <h1 className="text-4xl font-bold tracking-tight">Monitoramento Digital</h1>
+                  <h1 className="text-4xl font-bold tracking-tight">Aplicativo Espião</h1>
                   <p className="text-[#8696a0] text-lg px-4">
                     Proteja sua paz de espírito. Análise confidencial de sinais e padrões de comportamento.
                   </p>
@@ -65,13 +71,13 @@ export default function Home() {
                 <div className="grid grid-cols-1 gap-4">
                   <Button 
                     onClick={() => setStep(2)}
-                    className="bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-[19px] text-lg font-bold transition-all active:scale-95 shadow-xl"
+                    className="bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-[19px] text-lg font-medium transition-all active:scale-95 shadow-xl border-none"
                   >
                     Analisar Meu Parceiro
                   </Button>
                   <Button 
                     onClick={() => setStep(2)}
-                    className="bg-transparent hover:bg-white/5 text-[#00a884] border-2 border-[#00a884] h-[60px] rounded-[19px] text-lg font-bold transition-all active:scale-95"
+                    className="bg-transparent hover:bg-white/5 text-[#00a884] border-2 border-[#00a884] h-[60px] rounded-[19px] text-lg font-medium transition-all active:scale-95"
                   >
                     Analisar Minha Parceira
                   </Button>
@@ -104,9 +110,9 @@ export default function Home() {
                     />
                   </div>
                   <Button 
-                    onClick={() => setStep(3)}
+                    onClick={handleStartScan}
                     disabled={phone.length < 9}
-                    className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-[19px] text-lg font-bold transition-all disabled:opacity-50 shadow-lg"
+                    className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-[19px] text-lg font-medium transition-all disabled:opacity-50 shadow-lg border-none"
                   >
                     Iniciar Varredura
                   </Button>
@@ -166,7 +172,7 @@ export default function Home() {
                     </div>
                     <h2 className="text-3xl font-bold text-white">Perfil Localizado!</h2>
                     <p className="text-[#8696a0] text-lg max-w-sm mx-auto">
-                      O número <span className="text-white font-mono font-bold">(+244) {phone}</span> foi identificado em nossos servidores.
+                      O número <span className="text-white font-mono font-bold">(+244) {targetPhone}</span> foi identificado em nossos servidores.
                     </p>
                   </div>
 
@@ -177,7 +183,7 @@ export default function Home() {
                          <p className="text-green-500 text-sm font-bold flex items-center justify-center gap-2">
                            <span className="w-2 h-2 bg-green-500 rounded-full"></span> Online agora
                          </p>
-                         <p className="text-white font-bold tracking-widest text-lg">(+244) {phone}</p>
+                         <p className="text-white font-bold tracking-widest text-lg">(+244) {targetPhone}</p>
                          <p className="text-[#8696a0] text-xs uppercase tracking-widest">Luanda, Angola</p>
                       </div>
                     </div>
@@ -186,7 +192,7 @@ export default function Home() {
                   <div className="space-y-4 w-full max-w-xs">
                     <Button 
                       onClick={() => setStep(5)}
-                      className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-full text-lg font-bold transition-all shadow-xl"
+                      className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[60px] rounded-full text-lg font-medium transition-all shadow-xl border-none"
                     >
                       Visualizar Relatório
                     </Button>
@@ -213,7 +219,7 @@ export default function Home() {
                   <span className="text-sm">Pesquisar ou começar uma nova conversa</span>
                 </div>
               </div>
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto scrollbar-hide">
                 {[1,2,3,4,5,6,7,8].map(i => (
                   <div key={i} className="flex p-3 gap-3 hover:bg-[#202c33] cursor-pointer border-b border-[#222d34]/50">
                     <div className="w-12 h-12 rounded-full bg-[#6a7175] blur-md shrink-0"></div>
@@ -222,7 +228,7 @@ export default function Home() {
                         <span className="font-medium text-[#e9edef] truncate">🔒 Perfil Bloqueado</span>
                         <span className="text-[10px] text-[#8696a0]">14:3{i}</span>
                       </div>
-                      <p className="text-xs text-[#8696a0] truncate italic">Dados privados ocultos...</p>
+                      <p className="text-xs text-[#8696a0] truncate italic italic">Dados privados ocultos...</p>
                     </div>
                   </div>
                 ))}
@@ -238,7 +244,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#6a7175] blur-sm"></div>
                   <div>
-                    <h3 className="font-medium text-[#e9edef] leading-tight">(+244) {phone}</h3>
+                    <h3 className="font-medium text-[#e9edef] leading-tight">(+244) {targetPhone}</h3>
                     <p className="text-[11px] text-[#00a884]">online</p>
                   </div>
                 </div>
@@ -249,7 +255,7 @@ export default function Home() {
               </div>
 
               {/* Messages Area */}
-              <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative">
+              <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative scrollbar-hide">
                 <div className="mx-auto bg-[#182229] py-1.5 px-3 rounded-lg text-[11px] text-[#8696a0] uppercase mb-4 shadow-sm border border-white/5">
                   Hoje
                 </div>
@@ -275,11 +281,11 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-bold text-white mb-4">Relatório Protegido</h3>
                       <p className="text-[#8696a0] text-sm leading-relaxed mb-8">
-                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias.
+                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias com este número: <span className="text-white font-bold">(+244) {targetPhone}</span>.
                       </p>
                       <Button 
                         onClick={() => window.location.href = "https://www.kintu.org/product/2f9ea4b3-2793-424f-8f1f-a98724e0db64"}
-                        className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[56px] rounded-full text-lg font-bold transition-all shadow-xl active:scale-95"
+                        className="w-full bg-[#00a884] hover:bg-[#06cf9c] text-[#111b21] h-[56px] rounded-full text-lg font-medium transition-all shadow-xl active:scale-95 border-none"
                       >
                         Desbloquear Agora
                       </Button>
