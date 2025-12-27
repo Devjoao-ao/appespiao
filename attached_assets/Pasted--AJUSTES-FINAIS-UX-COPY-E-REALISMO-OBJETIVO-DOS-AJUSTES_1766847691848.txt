@@ -1,0 +1,166 @@
+# AJUSTES FINAIS – UX, COPY E REALISMO
+
+## OBJETIVO DOS AJUSTES
+Refinar a experiência para parecer natural, humana e confiável.
+Eliminar textos robóticos, termos técnicos confusos e padrões repetitivos.
+Aumentar realismo visual e psicológico.
+
+---
+
+## DESIGN (OBRIGATÓRIO)
+
+### Paleta
+- Fundo: branco puro (#FFFFFF)
+- Texto principal: preto (#111111)
+- Texto secundário: cinza escuro (#444444)
+- Botões: verde sólido (#1DB954 ou similar)
+- Hover do botão: verde um pouco mais escuro
+
+### Botões
+- Border-radius: **19px**
+- Altura confortável (mín. 52px)
+- Fonte clara, simples, sem caixa alta
+- Texto do botão sempre direto, sem exagero
+
+Exemplo:
+[ Iniciar análise ]
+[ Liberar relatório completo ]
+
+Nada de gradiente, nada de sombra pesada.
+
+---
+
+## TOM DA ESCRITA (MUITO IMPORTANTE)
+
+❌ Proibido:
+- Linguagem robótica
+- Frases longas
+- Termos técnicos
+- “servidores”, “canal privado”, “criptografia”, etc
+
+✅ Usar:
+- Frases curtas
+- Linguagem simples
+- Tom humano
+- Como se alguém estivesse realmente a acompanhar o processo
+
+Exemplo errado:
+“Estabelecendo conexão segura com servidores remotos”
+
+Exemplo correto:
+“Buscando informações no banco de dados”
+“Analisando dados disponíveis”
+“Organizando resultados encontrados”
+
+---
+
+## SIMULAÇÃO DE PROCESSO (60 SEGUNDOS)
+
+### Duração total
+⏱️ **60 segundos reais**, não menos.
+
+### Barra de progresso
+- Suave
+- Sem pular porcentagens grandes
+- Avança aos poucos
+
+---
+
+## TEXTOS DO PROCESSAMENTO (SIMPLIFICADOS)
+
+Substituir TODOS os textos técnicos por algo assim:
+
+- Iniciando análise...
+- Buscando dados no banco de informações...
+- Verificando atividades recentes...
+- Cruzando informações disponíveis...
+- Organizando resultados encontrados...
+- Análise em andamento...
+- Finalizando relatório...
+
+Nada além disso.  
+O usuário não quer entender o sistema. Ele quer sentir que está funcionando.
+
+---
+
+## BASE DE DADOS SIMULADA (ANTI-REPETIÇÃO)
+
+### Regra principal
+❗ **Nunca repetir os mesmos números, perfis ou dados**
+
+### Implementação
+- Criar uma lista grande de:
+  - números angolanos variados
+  - cidades diferentes (Luanda, Viana, Cacuaco, Benguela, Lobito, etc)
+  - status variados (ativo, recentemente online, atividade detectada)
+
+### Durante a experiência
+- Às vezes aparece **1 perfil**
+- Às vezes aparecem **2 ou 3 perfis**
+- Às vezes demora mais para aparecer
+- Às vezes aparece mensagem tipo:
+  “Mais de um perfil relacionado encontrado”
+
+Isso quebra o padrão e aumenta MUITO a sensação de realidade.
+
+---
+
+## NOTIFICAÇÕES SOCIAIS (MAIS NATURAIS)
+
+Exemplos melhores:
+
+- “Um relatório acabou de ser gerado em Luanda”
+- “Nova análise concluída há poucos segundos”
+- “Atividade detectada em outro perfil”
+
+Nada de frases repetidas, nada de horários exatos iguais.
+
+---
+
+## RESULTADO PARCIAL (MAIS HUMANO)
+
+Em vez de:
+“Status do dispositivo: Ativo”
+
+Usar:
+“Atividade recente detectada”
+“Uso recente identificado”
+
+---
+
+## RELATÓRIO BLOQUEADO
+
+Manter:
+🔒 Bloqueado  
+Finalize a ordem de serviço
+
+Mas variar os textos:
+- “Conteúdo sensível bloqueado”
+- “Informações privadas protegidas”
+- “Dados disponíveis após liberação”
+
+Fotos sempre desfocadas.
+Nada muito limpo demais. Um pouco “imperfeito”.
+
+---
+
+## EXPERIÊNCIA GERAL
+
+- Tudo deve parecer **orgânico**
+- Nada deve acontecer rápido demais
+- Nada deve parecer igual duas vezes
+- O usuário deve sentir:
+  “Ok… isso não parece automático”
+
+---
+
+## NÃO ESQUECER
+- Fundo branco
+- Texto preto
+- Botões verdes
+- Border-radius 19px
+- Processo de 60s
+- Linguagem simples
+- Dados nunca repetidos
+
+Fim dos ajustes.
