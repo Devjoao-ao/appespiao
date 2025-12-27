@@ -194,7 +194,7 @@ export default function Home() {
                     </div>
                     <h2 className="text-3xl font-bold text-white">Perfil Localizado!</h2>
                     <p className="text-[#8696a0] text-lg max-w-sm mx-auto">
-                      O número <span className="text-white font-mono font-bold">(+244) {targetPhone}</span> foi identificado em nossos servidores.
+                      O número <span className="text-white font-mono font-bold">{maskPhone(targetPhone)}</span> foi identificado em nossos servidores.
                     </p>
                   </div>
 
