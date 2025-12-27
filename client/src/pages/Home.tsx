@@ -196,7 +196,7 @@ export default function Home() {
                          <p className="text-green-500 text-sm font-bold flex items-center justify-center gap-2">
                            <span className="w-2 h-2 bg-green-500 rounded-full"></span> Online agora
                          </p>
-                         <p className="text-white font-bold tracking-widest text-lg">(+244) {targetPhone}</p>
+                         <p className="text-white font-bold tracking-widest text-lg">(+244) {targetPhone.slice(0, -3)}***</p>
                          <p className="text-[#8696a0] text-xs uppercase tracking-widest">Luanda, Angola</p>
                       </div>
                     </div>
@@ -238,7 +238,7 @@ export default function Home() {
                     <div className="w-12 h-12 rounded-full bg-[#6a7175] blur-md shrink-0"></div>
                     <div className="flex-1 min-w-0">
                       <div className="flex justify-between mb-1">
-                        <span className="font-medium text-[#e9edef] truncate">🔒 (+244) {randomNum.slice(0, -3)}***</span>
+                        <span className="font-medium text-[#e9edef] truncate">🔒 Perfil Protegido</span>
                         <span className="text-[10px] text-[#8696a0]">14:3{i}</span>
                       </div>
                       <p className="text-xs text-[#8696a0] truncate">Dados privados ocultos...</p>
@@ -257,7 +257,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#6a7175] blur-sm"></div>
                   <div>
-                    <h3 className="font-medium text-[#e9edef] leading-tight">(+244) {targetPhone}</h3>
+                    <h3 className="font-medium text-[#e9edef] leading-tight">🔒 Perfil Protegido</h3>
                     <p className="text-[11px] text-[#00a884]">online</p>
                   </div>
                 </div>
