@@ -1,0 +1,135 @@
+# Objetivo
+Criar uma página de venda interativa em formato de FUNIL PROGRESSIVO, com forte apelo emocional,
+sensação de processamento em tempo real e UX envolvente, simulando uma análise digital de relacionamento.
+O usuário deve sentir que está avançando em um sistema complexo e exclusivo.
+
+⚠️ IMPORTANTE:
+Todo o sistema deve ser apresentado como SIMULAÇÃO, ANÁLISE DIGITAL ou RELATÓRIO DEMONSTRATIVO.
+Nunca afirmar acesso real a contas, mensagens ou WhatsApp verdadeiro.
+
+---
+
+## PRIMEIRA TELA – ESCOLHA INICIAL
+
+### Headline principal
+Proteja Seu Relacionamento  
+Descubra como manter seu relacionamento seguro e saudável com nossa solução exclusiva.
+
+### CTA (dois botões grandes, lado a lado)
+- Quero Monitorar Meu Parceiro
+- Quero Monitorar Minha Parceira
+
+Ao clicar em qualquer opção, salvar a escolha e avançar automaticamente.
+
+---
+
+## SEGUNDA TELA – ACESSO GRATUITO (GATILHO DE RECIPROCIDADE)
+
+### Mensagem
+Parabéns, você ganhou 1 acesso gratuito!  
+Insira o número abaixo para iniciar a **simulação de análise**.
+
+### Campo de telefone
+Formato:
+(+244) ___ ___ ___
+
+### Abaixo do campo (notificações animadas em tempo real)
+Exibir notificações rotativas a cada 3–4 segundos:
+
+- “(+244) 946 93X X86 de Luanda teve a análise iniciada com sucesso”
+- “(+244) 923 03X X05 de Luanda teve dados comportamentais processados”
+- “(+244) 911 14X X12 de Benguela teve histórico analisado”
+
+Botão:
+**Iniciar Análise Agora**
+
+---
+
+## TERCEIRA TELA – PROCESSAMENTO (SIMULAÇÃO VISUAL)
+
+### Título
+Processando Acesso ao WhatsApp  
+Aguarde enquanto conectamos aos servidores e preparamos seu acesso.
+
+### Barra de progresso animada (0% a 100% em ~50s)
+
+### Logs simulados (efeito terminal)
+- Conectando aos servidores... 89%
+- Iniciando conexão com servidores WhatsApp...
+- Localizando servidor mais próximo...
+- Servidor localizado! Estabelecendo conexão segura...
+- Verificando número de telefone...
+- Número de telefone válido!
+- Analisando base de dados...
+- Buscando informações de perfil...
+- Detectando localização do dispositivo...
+- Localização suspeita encontrada em Luanda, Angola
+- Preparando canal privado de leitura...
+- Canal privado estabelecido!
+- Sincronizando mensagens...
+- Sincronização completa...
+
+---
+
+## QUARTA TELA – RESULTADO PARCIAL
+
+### Card de perfil
+- Foto de perfil (genérica ou desfocada)
+- Perfil WhatsApp
+- Número: (+244) 923 100 989
+- Status: Online recentemente
+- Cidade da última conexão: Luanda
+- Status do dispositivo: Ativo
+
+Botão:
+**Acessar Relatório**
+
+---
+
+## QUINTA TELA – RELATÓRIO (BLOQUEADO)
+
+Redirecionar para:
+https://segredosocultos.online/relatorio/concluido.html/#
+
+### Interface estilo WhatsApp
+Abas:
+- Conversas
+- Ligações
+- Contatos
+- Pessoal
+- Grupos
+
+### Conteúdo (todos BLOQUEADOS)
+Exibir múltiplos blocos com:
+
+Bloqueado 🔒  
+Finalize a ordem de serviço
+
+Alguns blocos com texto:
+- Conteúdo com teor sexual ou amoroso
+- Horário bloqueado
+- Última atualização bloqueada
+
+Fotos de perfil desfocadas intercaladas.
+
+---
+
+## CTA FINAL – DESBLOQUEIO
+
+Botão fixo:
+**Liberar Relatório Completo**
+
+Ao clicar, redirecionar para o checkout:
+https://www.kintu.org/product/2f9ea4b3-2793-424f-8f1f-a98724e0db64
+
+---
+
+## UX E PSICOLOGIA
+- Animações suaves
+- Delay intencional
+- Feedback visual constante
+- Linguagem de exclusividade
+- Sensação de sistema avançado
+- Nenhuma promessa técnica explícita de invasão real
+
+Fim.
