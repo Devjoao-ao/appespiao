@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,6 +25,7 @@
   --input: 0 0% 89.8%;
   --ring: 142.1 70.6% 45.3%;
   --radius: 19px;
+  --font-sans: 'Open Sans', sans-serif;
 }
 
 @layer base {
@@ -35,5 +38,5 @@
 }
 
 .btn-green {
-  @apply bg-[#1DB954] hover:bg-[#1aa34a] text-white font-medium py-3 px-6 rounded-[19px] transition-colors h-[52px] flex items-center justify-center text-lg;
+  @apply bg-[#16A34A] hover:bg-[#15803d] text-white font-medium py-3 px-6 rounded-[19px] transition-colors h-[52px] flex items-center justify-center text-lg;
 }

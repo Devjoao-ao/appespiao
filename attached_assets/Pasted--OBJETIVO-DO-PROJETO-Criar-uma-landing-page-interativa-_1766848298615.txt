@@ -1,0 +1,164 @@
+# OBJETIVO DO PROJETO
+Criar uma landing page interativa de alta conversão que simula uma experiência de análise de relacionamento digital,
+com foco em curiosidade, progressão visual, UX realista e desbloqueio de conteúdo via checkout.
+
+⚠️ Importante:
+- Não afirmar acesso real a WhatsApp ou contas privadas
+- Tratar tudo como análise, simulação e relatório comportamental
+- Linguagem natural, humana, nada robótico
+
+---
+
+# ESTILO VISUAL (OBRIGATÓRIO)
+- Fundo: branco (#FFFFFF)
+- Texto principal: preto (#111111)
+- Botões: verde (#16A34A)
+- Border-radius dos botões: 19px
+- Fonte: Open Sans (Google Fonts)
+- Layout limpo, moderno, estilo app real
+- Nada técnico demais para o usuário final
+
+---
+
+# PÁGINA 1 – ESCOLHA INICIAL
+
+## Headline
+Proteja Seu Relacionamento  
+Descubra sinais digitais que podem indicar riscos no seu relacionamento.
+
+## Subheadline
+Análise privada, rápida e confidencial.
+
+## Botões (obrigatório escolher um):
+[ Quero Analisar Meu Parceiro ]  
+[ Quero Analisar Minha Parceira ]
+
+Ao clicar, avançar para a próxima etapa (sem reload).
+
+---
+
+# PÁGINA 2 – ACESSO GRATUITO
+
+## Mensagem
+Parabéns, você ganhou 1 acesso gratuito!
+
+Insira o número abaixo para iniciar a análise digital.
+
+## Campo
+Input telefone com prefixo automático:
+(+244) ___ ___ ___
+
+## Microcopy
+Nunca armazenamos números. Análise 100% privada.
+
+---
+
+# NOTIFICAÇÕES DINÂMICAS (FAKE SOCIAL PROOF)
+Exibir notificações rotativas, nunca repetir o mesmo número:
+
+- (+244) 946 93X X86 – Luanda – análise concluída
+- (+244) 923 03X X05 – Luanda – sinais detectados
+- (+244) 911 14X X12 – Benguela – relatório gerado
+- (+244) 932 44X X91 – Huambo – análise em andamento
+
+⚠️ Sempre variar prefixos e cidades.
+
+---
+
+# PÁGINA 3 – PROCESSAMENTO (60 SEGUNDOS)
+
+## Título
+Processando Análise Digital
+
+## Subtítulo
+Aguarde enquanto cruzamos dados públicos e padrões comportamentais.
+
+## Barra de progresso (animada até 100%)
+
+### Etapas (linguagem simples):
+- Conectando ao banco de dados...
+- Validando número informado...
+- Buscando padrões de atividade...
+- Analisando horários recorrentes...
+- Verificando sinais comportamentais...
+- Cruzando informações disponíveis...
+- Preparando relatório privado...
+
+Tempo total: 60 segundos reais.
+
+---
+
+# PÁGINA 4 – PERFIL RESUMIDO
+
+Exibir card estilo WhatsApp:
+
+- Foto genérica de perfil
+- Número analisado
+- Status: Ativo recentemente
+- Cidade de última atividade: Luanda
+- Estado da análise: Concluída
+
+Botão:
+[ Acessar Relatório Completo ]
+
+---
+
+# REDIRECIONAMENTO
+Levar para:
+https://segredosocultos.online/relatorio/concluido.html/#
+
+---
+
+# PÁGINA 5 – RELATÓRIO BLOQUEADO (ALTA CONVERSÃO)
+
+Interface estilo WhatsApp Web.
+
+Abas:
+- Conversas
+- Ligações
+- Contatos
+- Grupos
+- Pessoal
+
+Todos os itens aparecem como:
+
+Bloqueado 🔒  
+Finalize a ordem de serviço para desbloquear este conteúdo.
+
+Exibir múltiplos blocos, alguns com:
+- “Conteúdo com teor emocional detectado”
+- “Padrões fora do habitual”
+- “Atividade recorrente em horários sensíveis”
+
+Nunca repetir textos iguais.
+
+---
+
+# CTA FINAL
+Botão fixo:
+[ Liberar Relatório Completo ]
+
+---
+
+# CHECKOUT
+Ao clicar, redirecionar para:
+https://www.kintu.org/product/2f9ea4b3-2793-424f-8f1f-a98724e0db64
+
+---
+
+# TOM DE TEXTO
+- Natural
+- Conversa humana
+- Nada robótico
+- Nada técnico demais
+- Passar sensação de sistema real sem prometer crime
+
+# EXPERIÊNCIA FINAL
+O usuário deve sentir:
+- curiosidade
+- urgência
+- progressão
+- frustração controlada
+- desejo de desbloquear
+
+Tudo fluido, rápido e convincente.
