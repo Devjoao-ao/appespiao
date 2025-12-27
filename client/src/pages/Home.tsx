@@ -21,10 +21,19 @@ export default function Home() {
   const [targetPhone, setTargetPhone] = useState("");
   const [randomPhones, setRandomPhones] = useState<string[]>([]);
 
+  const [selectedProfile, setSelectedProfile] = useState<number | null>(null);
+
   useEffect(() => {
     // Generate some random phones on load to vary the sidebar
     setRandomPhones(Array.from({ length: 8 }, () => generateRandomPhone()));
   }, []);
+
+  const maskPhone = (num: string) => {
+    if (!num) return "";
+    const clean = num.replace(/\D/g, "");
+    if (clean.length < 3) return num;
+    return `(+244) ${clean.slice(0, 3)} ${clean.slice(3, 6)} ***`;
+  };
 
   useEffect(() => {
     if (step === 3) {
@@ -196,7 +205,7 @@ export default function Home() {
                          <p className="text-green-500 text-sm font-bold flex items-center justify-center gap-2">
                            <span className="w-2 h-2 bg-green-500 rounded-full"></span> Online agora
                          </p>
-                         <p className="text-white font-bold tracking-widest text-lg">(+244) {targetPhone.slice(0, -3)}***</p>
+                    <p className="text-white font-bold tracking-widest text-lg">{maskPhone(targetPhone)}</p>
                          <p className="text-[#8696a0] text-xs uppercase tracking-widest">Luanda, Angola</p>
                       </div>
                     </div>
@@ -234,7 +243,11 @@ export default function Home() {
               </div>
               <div className="flex-1 overflow-y-auto scrollbar-hide">
                 {randomPhones.map((randomNum, i) => (
-                  <div key={i} className="flex p-3 gap-3 hover:bg-[#202c33] cursor-pointer border-b border-[#222d34]/50">
+                  <div 
+                    key={i} 
+                    onClick={() => setSelectedProfile(i)}
+                    className={`flex p-3 gap-3 hover:bg-[#202c33] cursor-pointer border-b border-[#222d34]/50 ${selectedProfile === i ? 'bg-[#2a3942]' : ''}`}
+                  >
                     <div className="w-12 h-12 rounded-full bg-[#6a7175] blur-md shrink-0"></div>
                     <div className="flex-1 min-w-0">
                       <div className="flex justify-between mb-1">
@@ -267,22 +280,23 @@ export default function Home() {
                 </div>
               </div>
 
-                <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative scrollbar-hide">
+                {/* Messages Area */}
+              <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 z-10 relative scrollbar-hide">
                 <div className="mx-auto bg-[#182229] py-1.5 px-3 rounded-lg text-[11px] text-[#8696a0] uppercase mb-4 shadow-sm border border-white/5">
                   Hoje
                 </div>
 
-                <div className="chat-bubble-received blur-[6px]">Olá, onde estás?</div>
-                <div className="chat-bubble-sent blur-[6px]">Estou em casa, porquê?</div>
-                <div className="chat-bubble-received blur-[6px] bg-red-900/10 border border-red-500/10">
+                <div className="chat-bubble-received blur-[12px]">Olá, onde estás? Vi-te ontem.</div>
+                <div className="chat-bubble-sent blur-[15px]">Estou em casa, porquê? Estavas com quem?</div>
+                <div className="chat-bubble-received blur-[12px] bg-red-900/10 border border-red-500/10">
                   <span className="text-[9px] text-red-500 font-bold block mb-1">MENSAGEM APAGADA</span>
-                  Temos de nos ver hoje...
+                  Temos de nos ver hoje... Não contes a ninguém.
                 </div>
-                <div className="chat-bubble-received blur-[8px]">Não contes a ninguém.</div>
-                <div className="chat-bubble-sent blur-[8px]">Ok, apaga as mensagens.</div>
-                <div className="chat-bubble-received blur-[10px]">Já mandei a localização.</div>
+                <div className="chat-bubble-received blur-[18px]">Não contes a ninguém sobre o que aconteceu.</div>
+                <div className="chat-bubble-sent blur-[15px]">Ok, apaga as mensagens todas por favor.</div>
+                <div className="chat-bubble-received blur-[20px]">Já mandei a localização em tempo real.</div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0b141a]/60 backdrop-blur-[2px] z-20">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0b141a]/70 backdrop-blur-[4px] z-20">
                    <motion.div 
                      initial={{ y: 30, opacity: 0 }}
                      animate={{ y: 0, opacity: 1 }}
@@ -293,7 +307,7 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-bold text-white mb-4">Relatório Protegido</h3>
                       <p className="text-[#8696a0] text-sm leading-relaxed mb-8">
-                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias com este número: <span className="text-white font-bold">(+244) {targetPhone.slice(0, -3)}***</span>.
+                        Foram encontradas <span className="text-white font-bold">12 mensagens apagadas</span> e <span className="text-white font-bold">4 fotos temporárias</span> trocadas nos últimos 3 dias com este número: <span className="text-white font-bold">{maskPhone(targetPhone)}</span>.
                       </p>
                       <Button 
                         onClick={() => window.location.href = "https://www.kintu.org/product/2f9ea4b3-2793-424f-8f1f-a98724e0db64"}
