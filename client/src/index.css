@@ -1,77 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Dark hacker theme base */
-  --background: 220 15% 5%;
-  --foreground: 142 70% 50%; /* Matrix green text */
-  
-  --primary: 142 70% 50%; /* Hacker Green */
-  --primary-foreground: 0 0% 0%;
-
-  --secondary: 0 0% 10%;
-  --secondary-foreground: 142 70% 90%;
-
-  --muted: 220 15% 10%;
-  --muted-foreground: 145 20% 45%;
-
-  --accent: 142 70% 50%;
-  --accent-foreground: 0 0% 0%;
-
-  --destructive: 0 84% 60%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 6.7%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 6.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 6.7%;
+  --primary: 142.1 70.6% 45.3%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-
-  --border: 142 70% 15%; /* Subtle green borders */
-  --input: 220 15% 10%;
-  --ring: 142 70% 50%;
-
-  --radius: 0.25rem;
-  
-  --font-display: 'Orbitron', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 142.1 70.6% 45.3%;
+  --radius: 19px;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground antialiased font-mono selection:bg-primary/30 selection:text-white overflow-x-hidden;
-    font-family: var(--font-mono);
-    background-image: 
-      linear-gradient(rgba(0, 20, 0, 0.95), rgba(0, 10, 0, 0.98)),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f3315' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  * {
+    @apply border-border;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    @apply uppercase tracking-wider;
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
   }
 }
 
-@layer utilities {
-  .animate-pulse-fast {
-    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-  
-  .text-glow {
-    text-shadow: 0 0 10px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3);
-  }
-
-  .border-glow {
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.3), inset 0 0 10px rgba(34, 197, 94, 0.1);
-  }
-
-  .scanline {
-    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
-    background-size: 100% 4px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 50;
-    opacity: 0.15;
-  }
+.btn-green {
+  @apply bg-[#1DB954] hover:bg-[#1aa34a] text-white font-medium py-3 px-6 rounded-[19px] transition-colors h-[52px] flex items-center justify-center text-lg;
 }
