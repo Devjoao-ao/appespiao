@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 6.7%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 6.7%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 6.7%;
-  --primary: 142.1 70.6% 45.3%;
+  --background: 0 0% 7%;
+  --foreground: 0 0% 90%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 90%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 90%;
+  --primary: 142 70% 35%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
-  --destructive: 0 84.2% 60.2%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 142 70% 35%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
-  --ring: 142.1 70.6% 45.3%;
+  --border: 0 0% 18%;
+  --input: 0 0% 18%;
+  --ring: 142 70% 35%;
   --radius: 19px;
-  --font-sans: 'Open Sans', sans-serif;
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @layer base {
@@ -33,10 +33,21 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans;
+    @apply bg-[#0b141a] text-[#e9edef] antialiased font-sans;
   }
 }
 
-.btn-green {
-  @apply bg-[#16A34A] hover:bg-[#15803d] text-white font-medium py-3 px-6 rounded-[19px] transition-colors h-[52px] flex items-center justify-center text-lg;
+.whatsapp-bg {
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-color: #0b141a;
+  background-blend-mode: overlay;
+  opacity: 0.06;
+}
+
+.chat-bubble-received {
+  @apply bg-[#202c33] text-[#e9edef] rounded-lg rounded-tl-none p-2 max-w-[85%] text-sm relative;
+}
+
+.chat-bubble-sent {
+  @apply bg-[#005c4b] text-[#e9edef] rounded-lg rounded-tr-none p-2 max-w-[85%] text-sm relative self-end;
 }
